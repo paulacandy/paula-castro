@@ -6,13 +6,13 @@
     <title>Paula Andrea Castro Mendoza | Data & AI Automation</title>
     <style>
         :root {
-            --primary: #059669; /* Verde esmeralda profesional */
-            --primary-dark: #047857;
-            --bg-color: #ffffff;
-            --text-main: #1f2937;
-            --text-muted: #4b5563;
-            --card-bg: #f9fafb;
-            --border-color: #e5e7eb;
+            --primary: #5eead4; /* Verde pastel suave */
+            --primary-dark: #0f766e;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --border-color: #e2e8f0;
         }
         
         body {
@@ -25,9 +25,9 @@
         }
 
         header {
-            background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
+            background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
             color: white;
-            padding: 3rem 2rem;
+            padding: 3.5rem 2rem;
             text-align: center;
         }
 
@@ -41,28 +41,36 @@
         }
 
         .profile-img {
-            width: 130px;
-            height: 130px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid #34d399;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            border: 4px solid var(--primary);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
         }
 
         header h1 {
             margin: 0;
             font-size: 2.2rem;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        /* Efecto hover interactivo en títulos de cabecera */
+        header h1:hover, header p:hover {
+            transform: scale(1.02);
+            color: var(--primary);
         }
 
         header p {
             font-size: 1.1rem;
-            color: #a7f3d0;
+            color: #ccfbf1;
             margin: 0;
+            transition: color 0.3s ease;
         }
 
         .contact-info {
             font-size: 0.95rem;
-            color: #e6fffa;
+            color: #f0fdfa;
             margin-top: 0.5rem;
         }
 
@@ -73,26 +81,41 @@
         }
 
         .card {
-            background: white;
+            background: var(--card-bg);
             padding: 2.5rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            border-radius: 16px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.03), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
             margin-bottom: 2rem;
             border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
+        /* Efecto hover interactivo en las tarjetas enteras */
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px -5px rgba(15, 118, 110, 0.08);
+        }
+
+        /* Efecto hover en títulos de sección */
         h2 {
             color: var(--primary-dark);
-            border-bottom: 2px solid #d1fae5;
+            border-bottom: 2px solid #ccfbf1;
             padding-bottom: 0.5rem;
             margin-top: 0;
             font-size: 1.5rem;
+            transition: color 0.3s ease, padding-left 0.3s ease;
+            cursor: default;
+        }
+
+        h2:hover {
+            color: #0d9488;
+            padding-left: 5px;
         }
 
         .job-item {
             margin-bottom: 2rem;
             padding-bottom: 1.5rem;
-            border-bottom: 1px solid #f3f4f6;
+            border-bottom: 1px solid #f1f5f9;
         }
 
         .job-item:last-child {
@@ -108,7 +131,7 @@
         }
 
         .job-company {
-            color: var(--primary);
+            color: #0d9488;
             font-weight: 600;
         }
 
@@ -118,18 +141,23 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Espacio destacado para proyectos con IA */
+        /* Bloque de proyectos limpio sin icono */
         .ai-project-box {
-            background: #f0fdf4;
-            border-left: 4px solid var(--primary);
-            padding: 1rem;
-            border-radius: 6px;
+            background: #f0fdfa;
+            border-left: 4px solid #14b8a6;
+            padding: 1rem 1.2rem;
+            border-radius: 8px;
             margin-top: 0.8rem;
+            transition: background 0.3s ease;
+        }
+
+        .ai-project-box:hover {
+            background: #ccfbf1;
         }
 
         .ai-project-box h4 {
             margin: 0 0 0.3rem 0;
-            color: #065f46;
+            color: #0f766e;
             font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -138,7 +166,7 @@
         .ai-project-box p {
             margin: 0;
             font-size: 0.95rem;
-            color: #166534;
+            color: #134e4a;
         }
 
         .skills-grid {
@@ -151,8 +179,13 @@
             font-size: 1rem;
             color: var(--text-main);
             margin-bottom: 0.5rem;
-            border-left: 3px solid var(--primary);
+            border-left: 3px solid #14b8a6;
             padding-left: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .skills-category h3:hover {
+            color: #0d9488;
         }
 
         .skills-list {
@@ -165,12 +198,19 @@
         }
 
         .skills-list li {
-            background: #ecfdf5;
-            color: #047857;
-            padding: 0.3rem 0.8rem;
+            background: #f0fdfa;
+            color: #0f766e;
+            padding: 0.35rem 0.85rem;
             border-radius: 20px;
             font-size: 0.85rem;
             font-weight: 600;
+            border: 1px solid #ccfbf1;
+            transition: all 0.2s ease;
+        }
+
+        .skills-list li:hover {
+            background: #ccfbf1;
+            transform: translateY(-2px);
         }
 
         footer {
@@ -182,19 +222,20 @@
 
         .btn {
             display: inline-block;
-            background: white;
-            color: var(--primary-dark);
+            background: var(--primary);
+            color: #134e4a;
             padding: 0.6rem 1.4rem;
-            border-radius: 6px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
             margin-top: 1rem;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: background 0.2s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: all 0.2s ease;
         }
 
         .btn:hover {
-            background: #ecfdf5;
+            background: #99f6e4;
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -202,8 +243,8 @@
 
     <header>
         <div class="header-content">
-            <!-- AQUÍ PUEDES PONER EL ENLACE O ARCHIVO DE TU FOTO -->
-            <img src="URL_DE_TU_FOTO_AQUI.jpg" alt="Paula Andrea Castro Mendoza" class="profile-img">
+            <!-- REEMPLAZA ESTE NOMBRE POR EL DE TU FOTO EN GITHUB -->
+            <img src="foto.jpg" alt="Paula Andrea Castro Mendoza" class="profile-img">
             <div>
                 <h1>Paula Andrea Castro Mendoza</h1>
                 <p>Ingeniera de Sistemas e Informática | Data Analytics, BI & AI Automation</p>
@@ -223,7 +264,7 @@
             <p>Ingeniera de Sistemas y estudiante de Máster en Big Data en la Universidad de Murcia, con experiencia sólida en Business Intelligence y analítica de datos. Dominio de Power BI, SQL, Microsoft Fabric, Python y automatización de procesos para transformar datos complejos en soluciones e insights de negocio de alto impacto. Competencia profesional en inglés (B2)[cite: 1].</p>
         </div>
 
-        <!-- EXPERIENCIA LABORAL & PROYECTOS DE IA -->
+        <!-- EXPERIENCIA LABORAL -->
         <div class="card">
             <h2>Experiencia Laboral & Automatización</h2>
             
@@ -234,9 +275,8 @@
                 <div class="job-date">ago. 2024 – ago. 2026</div>
                 <p>Desarrollo de soluciones de Business Intelligence para el sector automotriz, utilizando Power BI, Azure Databricks, Excel, SQL y PySpark[cite: 1]. Creación de sistemas de almacenamiento y análisis de comportamiento de datos a gran escala.</p>
                 
-                <!-- ESPACIO PARA PROYECTO CON IA -->
                 <div class="ai-project-box">
-                    <h4>🤖 Proyecto de Automatización e IA Aplicada</h4>
+                    <h4>Automatización e IA Aplicada</h4>
                     <p>Diseño de flujos inteligentes y convertidores automáticos en Python para transformar estructuras de datos complejas de Excel y bases de datos, reduciendo drásticamente la intervención manual y optimizando la ingestión de datos analíticos.</p>
                 </div>
             </div>
@@ -248,9 +288,8 @@
                 <div class="job-date">ago. 2023 – ene. 2024</div>
                 <p>Desarrollo de dashboards en Looker para la monitorización de SARLAFT del equipo analítico, gestión de datos con Excel/hojas de cálculo y optimización de flujos mediante automatizaciones en Google Apps Script[cite: 1].</p>
                 
-                <!-- ESPACIO PARA PROYECTO CON IA -->
                 <div class="ai-project-box">
-                    <h4>🤖 Proyecto de Automatización e IA Aplicada</h4>
+                    <h4>Automatización e IA Aplicada</h4>
                     <p>Implementación de flujos lógicos con Google Apps Script y automatización de procesos operativos internos para la centralización segura de auditorías y reportes de cumplimiento[cite: 1].</p>
                 </div>
             </div>
