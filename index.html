@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paula Andrea Castro Mendoza | Data & AI Automation</title>
+    <style>
+        :root {
+            --primary: #059669; /* Verde esmeralda profesional */
+            --primary-dark: #047857;
+            --bg-color: #ffffff;
+            --text-main: #1f2937;
+            --text-muted: #4b5563;
+            --card-bg: #f9fafb;
+            --border-color: #e5e7eb;
+        }
+        
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #34d399;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #a7f3d0;
+            margin: 0;
+        }
+
+        .contact-info {
+            font-size: 0.95rem;
+            color: #e6fffa;
+            margin-top: 0.5rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -2rem auto 3rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 2rem;
+            border: 1px solid var(--border-color);
+        }
+
+        h2 {
+            color: var(--primary-dark);
+            border-bottom: 2px solid #d1fae5;
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+
+        .job-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #f3f4f6;
+        }
+
+        .job-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .job-title {
+            font-weight: bold;
+            font-size: 1.15rem;
+            color: var(--text-main);
+        }
+
+        .job-company {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .job-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Espacio destacado para proyectos con IA */
+        .ai-project-box {
+            background: #f0fdf4;
+            border-left: 4px solid var(--primary);
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 0.8rem;
+        }
+
+        .ai-project-box h4 {
+            margin: 0 0 0.3rem 0;
+            color: #065f46;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .ai-project-box p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #166534;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skills-category h3 {
+            font-size: 1rem;
+            color: var(--text-main);
+            margin-bottom: 0.5rem;
+            border-left: 3px solid var(--primary);
+            padding-left: 0.5rem;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skills-list li {
+            background: #ecfdf5;
+            color: #047857;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: white;
+            color: var(--primary-dark);
+            padding: 0.6rem 1.4rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: #ecfdf5;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <!-- AQUÍ PUEDES PONER EL ENLACE O ARCHIVO DE TU FOTO -->
+            <img src="URL_DE_TU_FOTO_AQUI.jpg" alt="Paula Andrea Castro Mendoza" class="profile-img">
+            <div>
+                <h1>Paula Andrea Castro Mendoza</h1>
+                <p>Ingeniera de Sistemas e Informática | Data Analytics, BI & AI Automation</p>
+                <div class="contact-info">
+                    📍 Murcia, España | 📧 paulaandreacastro44@gmail.com | 📱 +34 744 257 116
+                </div>
+            </div>
+            <a href="mailto:paulaandreacastro44@gmail.com" class="btn">Contáctame</a>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- PERFIL PROFESIONAL -->
+        <div class="card">
+            <h2>Perfil Profesional</h2>
+            <p>Ingeniera de Sistemas y estudiante de Máster en Big Data en la Universidad de Murcia, con experiencia sólida en Business Intelligence y analítica de datos. Dominio de Power BI, SQL, Microsoft Fabric, Python y automatización de procesos para transformar datos complejos en soluciones e insights de negocio de alto impacto. Competencia profesional en inglés (B2)[cite: 1].</p>
+        </div>
+
+        <!-- EXPERIENCIA LABORAL & PROYECTOS DE IA -->
+        <div class="card">
+            <h2>Experiencia Laboral & Automatización</h2>
+            
+            <!-- Inchcape Digital -->
+            <div class="job-item">
+                <div class="job-title">Analista de Datos</div>
+                <div class="job-company">Inchcape Digital</div>
+                <div class="job-date">ago. 2024 – ago. 2026</div>
+                <p>Desarrollo de soluciones de Business Intelligence para el sector automotriz, utilizando Power BI, Azure Databricks, Excel, SQL y PySpark[cite: 1]. Creación de sistemas de almacenamiento y análisis de comportamiento de datos a gran escala.</p>
+                
+                <!-- ESPACIO PARA PROYECTO CON IA -->
+                <div class="ai-project-box">
+                    <h4>🤖 Proyecto de Automatización e IA Aplicada</h4>
+                    <p>Diseño de flujos inteligentes y convertidores automáticos en Python para transformar estructuras de datos complejas de Excel y bases de datos, reduciendo drásticamente la intervención manual y optimizando la ingestión de datos analíticos.</p>
+                </div>
+            </div>
+
+            <!-- Crezcamos SA -->
+            <div class="job-item">
+                <div class="job-title">Desarrollador de Business Intelligence</div>
+                <div class="job-company">Crezcamos SA</div>
+                <div class="job-date">ago. 2023 – ene. 2024</div>
+                <p>Desarrollo de dashboards en Looker para la monitorización de SARLAFT del equipo analítico, gestión de datos con Excel/hojas de cálculo y optimización de flujos mediante automatizaciones en Google Apps Script[cite: 1].</p>
+                
+                <!-- ESPACIO PARA PROYECTO CON IA -->
+                <div class="ai-project-box">
+                    <h4>🤖 Proyecto de Automatización e IA Aplicada</h4>
+                    <p>Implementación de flujos lógicos con Google Apps Script y automatización de procesos operativos internos para la centralización segura de auditorías y reportes de cumplimiento[cite: 1].</p>
+                </div>
+            </div>
+
+            <!-- ESSA -->
+            <div class="job-item">
+                <div class="job-title">Practicante de Tecnología de la Información</div>
+                <div class="job-company">Electrificadora de Santander ESSA</div>
+                <div class="job-date">nov. 2022 – abr. 2023</div>
+                <p>Proyecto de grado enfocado en Ingeniería de Datos: limpieza y transformación de datos, implementación de soluciones analíticas y levantamiento de requerimientos de negocio con SQL Server Management Studio[cite: 1].</p>
+            </div>
+
+        </div>
+
+        <!-- HABILIDADES TÉCNICAS -->
+        <div class="card">
+            <h2>Habilidades Técnicas</h2>
+            <div class="skills-grid">
+                
+                <div class="skills-category">
+                    <h3>BI & Visualización</h3>
+                    <ul class="skills-list">
+                        <li>Power BI</li>
+                        <li>DAX</li>
+                        <li>Power Query</li>
+                        <li>Looker</li>
+                    </ul>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Datos & Cloud</h3>
+                    <ul class="skills-list">
+                        <li>Microsoft Fabric</li>
+                        <li>Azure Databricks</li>
+                        <li>PySpark</li>
+                        <li>SQL Server</li>
+                    </ul>
+                </div>
+
+                <div class="skills-category">
+                    <h3>Automatización & Código</h3>
+                    <ul class="skills-list">
+                        <li>Python</li>
+                        <li>Power Automate</li>
+                        <li>Google Apps Script</li>
+                        <li>APIs & IA Integration</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- FORMACIÓN ACADÉMICA -->
+        <div class="card">
+            <h2>Formación Académica</h2>
+            <p><strong>Máster Universitario en Tecnologías de Análisis de Datos Masivos: Big Data</strong><br>Universidad de Murcia (2026 - 2027)[cite: 1]</p>
+            <p><strong>Ingeniería de Sistemas e Informática</strong><br>Universidad Industrial de Santander (2017 - 2023)[cite: 1]</p>
+            <p><strong>Certificación Internacional en Metodologías Ágiles</strong><br>Pontificia Universidad Javeriana[cite: 1]</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Paula Andrea Castro Mendoza — Portafolio Profesional 2026</p>
+    </footer>
+
+</body>
+</html>
